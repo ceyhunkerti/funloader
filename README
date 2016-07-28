@@ -1,0 +1,11 @@
+AIX
+-------------------------------------------------------
+
+cc -g -O3  -DOCI_IMPORT_LINKAGE -DOCILIB_CHARSET_ANSI -DSIMULATION -I/usr/local/include -L/u01/app/oracle/product/10.2.0/db_1/lib32 -L/u01/app/oracle/product/10.2.0/db_1/lib -L/usr/local/lib -locilib demo.c -o demo
+
+LD_LIBRARY_PATH=/usr/local/lib:$ORACLE_HOME/lib:$ORACLE_HOME/lib32
+
+LD_LIBRARY_PATH=/usr/local/lib:/u01/app/oracle/product/10.2.0/db_1/lib32:/u01/app/oracle/product/10.2.0/db_1/lib
+
+LIBPATH=/u01/app/oracle/product/10.2.0/db_1/lib:/u01/app/oracle/product/10.2.0/db_1/lib32:/usr/lib:/lib
+-------------------------------------------------------

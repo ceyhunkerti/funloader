@@ -1,0 +1,19 @@
+perl -p -e 's/\r$//' get_opt.c get_opt.c
+perl -p -e 's/\r$//' get_opt.h get_opt.h
+perl -p -e 's/\r$//' utils.h utils.h
+perl -p -e 's/\r$//' utils.c utils.c
+perl -p -e 's/\r$//' time_utils.h time_utils.h
+perl -p -e 's/\r$//' time_utils.c time_utils.c
+perl -p -e 's/\r$//' str_utils.h str_utils.h
+perl -p -e 's/\r$//' str_utils.c str_utils.c
+perl -p -e 's/\r$//' linkedlist.h linkedlist.h
+perl -p -e 's/\r$//' linkedlist.c linkedlist.c
+perl -p -e 's/\r$//' help.h help.h
+perl -p -e 's/\r$//' help.c help.c
+perl -p -e 's/\r$//' funloader.c funloader.c
+perl -p -e 's/\r$//' funloader.cfg funloader.cfg
+perl -p -e 's/\r$//' arch_string.h arch_string.h
+perl -p -e 's/\r$//' defs.h defs.h
+perl -p -e 's/\r$//' ful_options.h ful_options.h
+perl -p -e 's/\r$//' ful_structs.h ful_structs.h
+

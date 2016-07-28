@@ -1,0 +1,58 @@
+#include "defs.h"
+#include "help.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+
+void printUsage(const short int exit_code) 
+{
+   printf("%s %s\n"
+          "Usage: funloader [Configuration File] [Options]\n"
+          "CONFIGURATION:\n"
+          "    -CONFIG_FILE <configuration file>: Configuration file name\n"
+          "       Ex: -CONFIG_FILE /root/FILES/funloader.cfg\n" 
+          "CONNECTION INFORMATION:\n"
+          "    -NET_SERVICE_NAME <net_service_name>: Net service name in your tnsnames.ora\n"    
+          "    -USER_NAME <user_name>: User name\n"
+          "    -PASSWORD <password>: Password\n"
+          "    -CONNECT_SESSION_MODE <connect_session_mode>: [DEFAULT|SYSDBA|SYSOPER]"
+          "MAIN TABLE INFO:\n"
+          "    -TABLE_OWNER <table_owner>: Schema name for the base table\n"
+          "    -TABLE_NAME  <table_name>: Base table name\n"
+          "    -TABLE_ALLIAS <table_allias>: Allias of the main table in unload query"
+          "    -TABLE_PARTITION_LEVEL <partition_level> partition level of base table.\n"
+          "PARTITIONING INFO:\n"
+          "    -PARTITION_NAME  <partition_name(s)> [PTI_20090101 [,PARTITION_NAME]]\n"   
+          "    -SUBPARTITION_NAME  <subpartition_name(s)> [SPTI_20090101 [,SUBPARTITION_NAME]]\n"   
+          "PARALLELISATION INFO:\n"
+          "    -PARALLEL_DEGREE <parallel_degree> Number of parallel sessions\n" 
+          "    -PARALLEL_TYPE <parallel_type> parallelisation type\n" 
+          "UNLOAD INPUT:\n"
+          "    -UNLOAD_QUERY <unload_query>: Unload query\n"
+          "    -UNLOAD_QUERY_FILE <unload_query_file>: Unload query file name \n"
+          "       Ex: Ex: -CONFIG_FILE /root/FILES/funloader.sql \n"    
+          "OUTPUT OPTIONS:\n"
+          "    -UNLOAD_FILE_NAME <unload_file_name>: Unload file name including directory information\n"
+          "    -UNLOAD_TO_PIPE \n"
+          "    -RECORD_DELIMITER <record_delimiter>: Row separator\n"
+          "    -FIELD_DELIMITER <field_delimiter>: \n"
+          "    -HEX_RECORD_DELIMITER <hex_recorddelimiter>: Hexadecimal represantation of record delimiter\n"
+          "    -HEX_FIELD_DELIMITER <hex_field_delimiter>: Hexadecimal represantation of field delimiter\n"
+          "    -DATE_FORMAT <date_format>: \n "
+          "FETCHING:\n"
+          "    -PREFETCH_SIZE <prefetch size>: \n"
+          "    -FETCH_SIZE <fetch_size> not implemented yet !\n"
+          "LOGGING:\n"
+          "    -EXEC_LOG_FILE <execution_log_file> : Log file to store execution log\n"
+          "    -EXEC_LOG_LEVEL <execution log level> (1,5)\n"
+          "    -DEBUGGING : Debugging mode\n"
+          "LOADING:\n"
+          "    -GENERATE_CTL_FILE: generate sql loader control file\n"
+          "    -LOAD_DATA: load data using sql loader\n"
+          "    -SQLLDR_OPT_STRING <sql_loader_options_string>: \n"      
+          "EXAMPLES:\n"
+          "SEE THE MANUAL FOR MORE INFORMATION\n"
+          , FUL_PROGRAM_NAME, FUL_PROGRAM_VERSION);
+
+   exit(exit_code);          
+}
